@@ -1,6 +1,6 @@
 {
   "name": "Havenstone Properties",
-  "description": "Find a place worth coming home to. Discover exceptional luxury homes, apartments, and investment properties in Lagos, Nigeria.",
+  "description": "Discover exceptional luxury homes, apartments, and investment properties in Lagos with Havenstone Properties. Verified titles, prime locations, and bespoke advisory.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

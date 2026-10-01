@@ -30,8 +30,8 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#0B0D10]/95 backdrop-blur-md border-b border-white/10 shadow-xl py-3.5'
-            : 'bg-gradient-to-b from-[#0B0D10]/80 via-[#0B0D10]/40 to-transparent py-5'
+            ? 'bg-[#060709]/95 backdrop-blur-md border-b border-[#ECC974]/20 shadow-[0_4px_30px_rgba(0,0,0,0.8)] py-3.5'
+            : 'bg-gradient-to-b from-[#060709]/90 via-[#060709]/50 to-transparent py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -41,10 +41,10 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
             className="flex items-center gap-2 group text-left"
             aria-label="Havenstone Properties Home"
           >
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-[0.2em] uppercase text-white group-hover:text-[#C5A880] transition-colors">
+            <span className="font-serif text-xl sm:text-2xl font-bold tracking-[0.2em] uppercase text-white group-hover:text-[#ECC974] transition-colors">
               HAVENSTONE
             </span>
-            <span className="text-[10px] tracking-[0.3em] uppercase text-[#C5A880] font-sans font-semibold pl-1 border-l border-white/20">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-[#ECC974] font-sans font-semibold pl-1.5 border-l border-white/20">
               PROPERTIES
             </span>
           </a>
@@ -55,7 +55,7 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-[#C5A880] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C5A880] hover:after:w-full after:transition-all after:duration-200"
+                className="hover:text-[#F3DE90] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-gradient-to-r after:from-[#ECC974] after:to-[#C79730] hover:after:w-full after:transition-all after:duration-200"
               >
                 {link.name}
               </a>
@@ -66,15 +66,15 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
           <div className="hidden sm:flex items-center gap-4">
             <a
               href="tel:+2348128844540"
-              className="text-xs font-medium tracking-wider text-neutral-300 hover:text-white flex items-center gap-1.5 transition-colors"
+              className="text-xs font-medium tracking-wider text-neutral-300 hover:text-white flex items-center gap-1.5 transition-colors group"
               title="Call Havenstone Properties"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
-              <span className="tabular-nums">08128844540</span>
+              <Phone className="w-3.5 h-3.5 text-[#ECC974] group-hover:drop-shadow-[0_0_8px_rgba(236,201,116,0.8)] transition-all" />
+              <span className="tabular-nums font-semibold">08128844540</span>
             </a>
             <button
               onClick={onScheduleClick}
-              className="px-4 py-2 text-xs font-semibold tracking-wider uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors shadow-sm whitespace-nowrap"
+              className="gold-btn px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-md cursor-pointer whitespace-nowrap"
             >
               Schedule Inspection
             </button>
@@ -86,14 +86,14 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
             className="md:hidden p-2 text-neutral-300 hover:text-white focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-[#ECC974]" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
         </div>
       </header>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden bg-[#0B0D10]/95 backdrop-blur-xl flex flex-col justify-between p-6">
+        <div className="fixed inset-0 z-50 md:hidden bg-[#060709]/98 backdrop-blur-xl flex flex-col justify-between p-6 border-b border-[#ECC974]/20">
           <div>
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <span className="font-serif text-lg font-bold tracking-[0.2em] uppercase text-white">
@@ -104,7 +104,7 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
                 className="p-2 text-neutral-300 hover:text-white"
                 aria-label="Close menu"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 text-[#ECC974]" />
               </button>
             </div>
 
@@ -114,7 +114,7 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-serif tracking-wider text-neutral-200 hover:text-[#C5A880] transition-colors py-1 border-b border-white/5"
+                  className="text-lg font-serif tracking-wider text-neutral-200 hover:text-[#ECC974] transition-colors py-1 border-b border-white/5"
                 >
                   {link.name}
                 </a>
@@ -128,7 +128,7 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
                 setMobileMenuOpen(false);
                 onScheduleClick();
               }}
-              className="w-full py-3 text-center text-xs font-semibold tracking-wider uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors"
+              className="gold-btn w-full py-3 text-center text-xs font-semibold tracking-wider uppercase rounded-md"
             >
               Schedule Inspection
             </button>
@@ -136,16 +136,16 @@ export default function Navbar({ onScheduleClick }: NavbarProps) {
             <div className="grid grid-cols-2 gap-3 mt-2">
               <a
                 href="tel:+2348128844540"
-                className="py-2.5 px-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-neutral-200 flex items-center justify-center gap-1.5 transition-colors"
+                className="py-2.5 px-3 rounded-md bg-white/5 hover:bg-white/10 border border-[#ECC974]/30 text-xs font-medium text-neutral-200 flex items-center justify-center gap-1.5 transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
-                <span className="tabular-nums">08128844540</span>
+                <Phone className="w-3.5 h-3.5 text-[#ECC974]" />
+                <span className="tabular-nums font-semibold">08128844540</span>
               </a>
               <a
                 href="https://wa.me/2348128844540?text=Hello%20Havenstone%20Properties,%20I%20would%20like%20to%20enquire%20about%20your%20Lagos%20properties."
                 target="_blank"
                 rel="noreferrer"
-                className="py-2.5 px-3 rounded-md bg-emerald-950/40 hover:bg-emerald-900/50 border border-emerald-500/30 text-xs font-medium text-emerald-300 flex items-center justify-center gap-1.5 transition-colors"
+                className="py-2.5 px-3 rounded-md bg-emerald-950/50 hover:bg-emerald-900/60 border border-emerald-500/40 text-xs font-medium text-emerald-300 flex items-center justify-center gap-1.5 transition-colors"
               >
                 <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
                 <span>WhatsApp</span>

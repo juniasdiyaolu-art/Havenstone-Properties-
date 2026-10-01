@@ -14,12 +14,12 @@ export default function PropertyShowcase({ onViewProperties }: PropertyShowcaseP
   ];
 
   return (
-    <section className="py-24 bg-[#0B0D10] relative overflow-hidden">
+    <section className="py-24 bg-[#060709] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left: Large High-Res Luxury Property Image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[1/1] border border-white/10 shadow-2xl group">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[1/1] border border-[#ECC974]/30 shadow-2xl group">
               <img
                 src={showcaseImage}
                 alt="Luxury waterfront architecture in Banana Island Lagos"
@@ -29,9 +29,9 @@ export default function PropertyShowcase({ onViewProperties }: PropertyShowcaseP
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
               {/* Floating Architectural Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#12151B]/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#0B0E14]/90 backdrop-blur-md border border-[#ECC974]/30 flex items-center justify-between shadow-2xl">
                 <div>
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#C5A880] block">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#ECC974] block font-semibold">
                     Private Listing
                   </span>
                   <span className="text-sm font-serif text-white font-medium">
@@ -40,37 +40,37 @@ export default function PropertyShowcase({ onViewProperties }: PropertyShowcaseP
                 </div>
                 <div className="text-right">
                   <span className="text-xs text-neutral-400 block">Verified Title</span>
-                  <span className="text-xs font-semibold text-[#E2C99A]">Gov. Consent</span>
+                  <span className="text-xs font-semibold text-[#ECC974]">Gov. Consent</span>
                 </div>
               </div>
             </div>
 
             {/* Subtle decorative gold backdrop aura */}
-            <div className="absolute -inset-4 bg-[#C5A880]/5 rounded-3xl blur-2xl -z-10" />
+            <div className="absolute -inset-4 bg-[#ECC974]/10 rounded-3xl blur-3xl -z-10" />
           </div>
 
           {/* Right: Editorial Narrative & Statistics */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold block mb-3">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#ECC974] font-semibold block mb-3">
               The Journey
             </span>
 
             <h2 className="font-serif text-3xl sm:text-5xl tracking-tight text-white uppercase font-normal leading-[1.15] text-balance">
               More Than a Property. <br />
-              <span className="italic font-light text-[#E2C99A]">It's Your Next Chapter.</span>
+              <span className="italic font-light gold-gradient-text drop-shadow-[0_2px_15px_rgba(236,201,116,0.25)]">It's Your Next Chapter.</span>
             </h2>
 
-            <p className="mt-6 text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg text-neutral-200 font-light leading-relaxed">
               Whether you're buying your first home, upgrading your lifestyle or searching for your next investment, we help you discover spaces that match your goals.
             </p>
 
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-sm text-neutral-300">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-neutral-200">
+                <CheckCircle2 className="w-4 h-4 text-[#ECC974] shrink-0" />
                 <span>Bespoke search tailored strictly to your aesthetic and security standards</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-neutral-300">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+              <div className="flex items-center gap-3 text-sm text-neutral-200">
+                <CheckCircle2 className="w-4 h-4 text-[#ECC974] shrink-0" />
                 <span>Complete confidentiality for private family offices and high-net-worth individuals</span>
               </div>
             </div>
@@ -79,10 +79,10 @@ export default function PropertyShowcase({ onViewProperties }: PropertyShowcaseP
             <div className="mt-8">
               <button
                 onClick={onViewProperties}
-                className="px-6 py-3.5 text-xs font-semibold tracking-widest uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors inline-flex items-center gap-2 cursor-pointer shadow-md"
+                className="gold-btn px-7 py-3.5 text-xs font-bold tracking-widest uppercase rounded-lg inline-flex items-center gap-2.5 cursor-pointer"
               >
                 <span>View Our Properties</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </button>
             </div>
 

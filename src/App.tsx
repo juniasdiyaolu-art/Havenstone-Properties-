@@ -113,7 +113,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0D10] text-[#F3F4F6] selection:bg-[#C5A880]/30 selection:text-[#F3F4F6]">
+    <div className="min-h-screen bg-[#060709] text-[#F3F4F6] selection:bg-[#ECC974]/30 selection:text-[#ECC974]">
       {/* Sticky Top Navigation */}
       <Navbar onScheduleClick={() => handleOpenInspection()} />
 

@@ -33,17 +33,17 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#0E1116] border-y border-white/5 relative">
+    <section id="services" className="py-24 bg-[#080B10] border-y border-[#ECC974]/15 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold block mb-3">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#ECC974] font-semibold block mb-3">
             The Havenstone Standard
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl tracking-tight text-white uppercase font-normal">
             Real Estate, Done Differently.
           </h2>
-          <p className="mt-4 text-base text-neutral-400 font-light leading-relaxed">
+          <p className="mt-4 text-base text-neutral-300 font-light leading-relaxed">
             We operate at the intersection of architectural beauty, legal certainty, and personalized discretion for discerning property buyers.
           </p>
         </div>
@@ -55,19 +55,19 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feat.title}
-                className="bg-[#12151B] border border-white/10 hover:border-[#C5A880]/40 rounded-xl p-8 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
+                className="bg-[#0D1017] border border-white/10 hover:border-[#ECC974]/60 rounded-2xl p-8 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-[0_0_30px_-5px_rgba(236,201,116,0.25),0_15px_20px_rgba(0,0,0,0.6)] shadow-xl relative"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#C5A880] group-hover:bg-[#C5A880]/10 transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-[#ECC974]/10 border border-[#ECC974]/30 flex items-center justify-center text-[#ECC974] group-hover:bg-[#ECC974]/20 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(236,201,116,0.3)] transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-mono text-xs text-neutral-500 tracking-wider">
+                    <span className="font-mono text-xs text-[#ECC974]/70 tracking-widest font-semibold">
                       {feat.index}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl font-normal text-white group-hover:text-[#E2C99A] transition-colors mb-3">
+                  <h3 className="font-serif text-2xl font-normal text-white group-hover:text-[#F3DE90] transition-colors mb-3">
                     {feat.title}
                   </h3>
 
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/5 text-xs text-neutral-400 font-normal">
+                <div className="pt-4 border-t border-white/10 text-xs text-neutral-400 font-normal">
                   {feat.detail}
                 </div>
               </div>

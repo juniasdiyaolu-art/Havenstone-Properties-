@@ -22,7 +22,7 @@ export default function BackToTop() {
     <aside aria-label="Back to top" className="fixed bottom-6 left-6 z-40">
       <button
         onClick={scrollToTop}
-        className="w-10 h-10 rounded-full bg-[#12151B]/90 backdrop-blur-md border border-white/15 text-neutral-300 hover:text-white hover:border-[#C5A880] flex items-center justify-center transition-all duration-200 shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
+        className="w-10 h-10 rounded-full bg-[#0B0E14]/90 backdrop-blur-md border border-[#ECC974]/30 text-neutral-300 hover:text-[#ECC974] hover:border-[#ECC974] hover:shadow-[0_0_20px_rgba(236,201,116,0.35)] flex items-center justify-center transition-all duration-200 shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
         aria-label="Scroll to top of page"
       >
         <ArrowUp className="w-4 h-4" />

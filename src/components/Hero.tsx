@@ -33,27 +33,27 @@ export default function Hero({
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
           referrerPolicy="no-referrer"
         />
-        {/* Measured Scrim for WCAG AA readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D10] via-[#0B0D10]/75 to-[#0B0D10]/50" />
-        <div className="absolute inset-0 bg-radial-[ellipse_at_center,_var(--tw-gradient-stops)] from-transparent via-[#0B0D10]/40 to-[#0B0D10]/80" />
+        {/* Measured Obsidian Scrim for WCAG AA readability & luxury depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060709] via-[#060709]/80 to-[#060709]/55" />
+        <div className="absolute inset-0 bg-radial-[ellipse_at_center,_var(--tw-gradient-stops)] from-transparent via-[#060709]/45 to-[#060709]/85" />
       </div>
 
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto text-center flex flex-col items-center">
         {/* Brand Kicker */}
-        <div className="inline-flex items-center gap-2 mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
+        <div className="inline-flex items-center gap-2 mb-4 px-3.5 py-1 rounded-full bg-white/[0.04] border border-[#ECC974]/20 text-xs font-semibold uppercase tracking-[0.25em] text-[#ECC974] shadow-[0_0_15px_rgba(236,201,116,0.1)]">
           <span>Lagos Prime Real Estate</span>
           <span aria-hidden="true" className="text-white/40">·</span>
           <span>Bespoke Advisory</span>
         </div>
 
         {/* Hero Headline */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase max-w-5xl leading-[1.08] text-balance font-medium">
-          FIND A PLACE WORTH <span className="italic font-normal text-[#E2C99A]">COMING HOME TO.</span>
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase max-w-5xl leading-[1.08] text-balance font-medium drop-shadow-sm">
+          FIND A PLACE WORTH <span className="italic font-normal gold-gradient-text drop-shadow-[0_2px_20px_rgba(236,201,116,0.35)]">COMING HOME TO.</span>
         </h1>
 
         {/* Subhead */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-300 max-w-2xl font-light leading-relaxed">
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-200 max-w-2xl font-light leading-relaxed">
           Discover exceptional homes, apartments and investment properties in Lagos and beyond.
         </p>
 
@@ -61,38 +61,38 @@ export default function Hero({
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <button
             onClick={onExploreProperties}
-            className="w-full sm:w-auto px-7 py-3.5 text-xs font-semibold tracking-widest uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-[#C5A880]/20 hover:scale-[1.02] cursor-pointer"
+            className="gold-btn w-full sm:w-auto px-8 py-4 text-xs font-bold tracking-widest uppercase rounded-md cursor-pointer flex items-center justify-center gap-2.5"
           >
             <span>Explore Properties</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 stroke-[2.5]" />
           </button>
           <button
             onClick={onScheduleInspection}
-            className="w-full sm:w-auto px-7 py-3.5 text-xs font-semibold tracking-widest uppercase text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-md transition-all duration-200 hover:scale-[1.02] cursor-pointer"
+            className="gold-btn-secondary w-full sm:w-auto px-8 py-4 text-xs font-semibold tracking-widest uppercase rounded-md cursor-pointer"
           >
             Schedule an Inspection
           </button>
         </div>
 
         {/* Small Trust Line */}
-        <div className="mt-8 flex items-center justify-center gap-2 text-xs sm:text-sm text-neutral-400 font-medium tracking-wide">
-          <ShieldCheck className="w-4 h-4 text-[#C5A880]" />
-          <span>Premium Homes</span>
-          <span aria-hidden="true" className="text-neutral-600">·</span>
-          <span>Verified Listings</span>
-          <span aria-hidden="true" className="text-neutral-600">·</span>
-          <span>Professional Service</span>
+        <div className="mt-8 flex items-center justify-center gap-2 text-xs sm:text-sm text-neutral-300 font-medium tracking-wide">
+          <ShieldCheck className="w-4 h-4 text-[#ECC974] drop-shadow-[0_0_6px_rgba(236,201,116,0.6)]" />
+          <span className="text-neutral-200">Premium Homes</span>
+          <span aria-hidden="true" className="text-neutral-500">·</span>
+          <span className="text-neutral-200">Verified Listings</span>
+          <span aria-hidden="true" className="text-neutral-500">·</span>
+          <span className="text-neutral-200">Professional Service</span>
         </div>
       </div>
 
       {/* Floating Property Search Panel */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 w-full mt-10">
-        <div className="bg-[#12151B]/85 backdrop-blur-xl border border-white/15 rounded-xl p-5 sm:p-6 shadow-2xl">
-          <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
-            <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold">
+        <div className="bg-[#0B0E14]/92 backdrop-blur-2xl border border-[#ECC974]/30 rounded-2xl p-5 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.85),inset_0_1px_0_0_rgba(255,255,255,0.1)]">
+          <div className="flex items-center justify-between mb-5 border-b border-white/10 pb-3">
+            <span className="text-xs uppercase tracking-widest gold-gradient-text font-bold">
               What are you looking for?
             </span>
-            <span className="text-xs text-neutral-400">
+            <span className="text-xs text-neutral-300">
               Verified Titles · Prime Locations
             </span>
           </div>
@@ -101,13 +101,13 @@ export default function Hero({
             {/* Location selector */}
             <div className="space-y-1.5 text-left">
               <label className="text-xs text-neutral-300 font-medium flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#C5A880]" />
+                <MapPin className="w-3.5 h-3.5 text-[#ECC974]" />
                 <span>Location</span>
               </label>
               <select
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
               >
                 <option value="All">All Lagos</option>
                 <option value="Lekki">Lekki Phase 1</option>
@@ -122,13 +122,13 @@ export default function Hero({
             {/* Property Type */}
             <div className="space-y-1.5 text-left">
               <label className="text-xs text-neutral-300 font-medium flex items-center gap-1.5">
-                <Home className="w-3.5 h-3.5 text-[#C5A880]" />
+                <Home className="w-3.5 h-3.5 text-[#ECC974]" />
                 <span>Property Type</span>
               </label>
               <select
                 value={propertyType}
                 onChange={(e) => setPropertyType(e.target.value)}
-                className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
               >
                 <option value="All">Any Property Type</option>
                 <option value="Apartment">Apartment</option>
@@ -141,13 +141,13 @@ export default function Hero({
             {/* Price */}
             <div className="space-y-1.5 text-left">
               <label className="text-xs text-neutral-300 font-medium flex items-center gap-1.5">
-                <Banknote className="w-3.5 h-3.5 text-[#C5A880]" />
+                <Banknote className="w-3.5 h-3.5 text-[#ECC974]" />
                 <span>Price</span>
               </label>
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
               >
                 <option value="All">Any Price</option>
                 <option value="under-100m">Under ₦100,000,000</option>
@@ -160,9 +160,9 @@ export default function Hero({
             <div>
               <button
                 type="submit"
-                className="w-full py-2.5 px-4 text-xs font-semibold tracking-wider uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="gold-btn w-full py-2.5 px-4 text-xs font-bold tracking-wider uppercase rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Search className="w-4 h-4" />
+                <Search className="w-4 h-4 stroke-[2.5]" />
                 <span>Search Properties</span>
               </button>
             </div>

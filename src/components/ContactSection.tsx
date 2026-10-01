@@ -40,13 +40,13 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0B0D10] relative">
+    <section id="contact" className="py-24 bg-[#060709] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Contact Details & Info */}
           <div className="lg:col-span-5 text-left flex flex-col justify-between">
             <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold block mb-3">
+              <span className="text-xs uppercase tracking-[0.25em] text-[#ECC974] font-semibold block mb-3">
                 Connect With Us
               </span>
 
@@ -62,14 +62,14 @@ export default function ContactSection() {
               <div className="mt-8 space-y-5">
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#C5A880] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ECC974] shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-xs text-neutral-400 block uppercase tracking-wider">Phone</span>
                     <a
                       href="tel:+2348128844540"
-                      className="text-base font-semibold text-white hover:text-[#C5A880] transition-colors tabular-nums"
+                      className="text-base font-semibold text-white hover:text-[#ECC974] transition-colors tabular-nums"
                     >
                       08128844540
                     </a>
@@ -78,7 +78,7 @@ export default function ContactSection() {
 
                 {/* WhatsApp */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-950/50 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-950/50 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
@@ -96,14 +96,14 @@ export default function ContactSection() {
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#C5A880] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ECC974] shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-xs text-neutral-400 block uppercase tracking-wider">Email</span>
                     <a
                       href="mailto:hello@havenstoneproperties.com"
-                      className="text-base font-semibold text-white hover:text-[#C5A880] transition-colors"
+                      className="text-base font-semibold text-white hover:text-[#ECC974] transition-colors"
                     >
                       hello@havenstoneproperties.com
                     </a>
@@ -112,7 +112,7 @@ export default function ContactSection() {
 
                 {/* Location */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#C5A880] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ECC974] shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -129,10 +129,10 @@ export default function ContactSection() {
             </div>
 
             {/* Operating Hours Note */}
-            <div className="mt-10 p-4 rounded-xl bg-[#12151B] border border-white/5 flex items-center gap-3">
-              <Clock className="w-5 h-5 text-[#C5A880] shrink-0" />
-              <div className="text-xs text-neutral-400">
-                <span className="text-white font-medium block">Office Hours</span>
+            <div className="mt-10 p-4 rounded-xl bg-[#0B0E14] border border-white/10 flex items-center gap-3">
+              <Clock className="w-5 h-5 text-[#ECC974] shrink-0" />
+              <div className="text-xs text-neutral-300">
+                <span className="text-white font-semibold block">Office Hours</span>
                 Monday to Saturday: 8:00 AM – 7:00 PM WAT
               </div>
             </div>
@@ -140,10 +140,10 @@ export default function ContactSection() {
 
           {/* Right Column: Stylish Enquiry Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#12151B] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+            <div className="bg-[#0B0E14] border border-[#ECC974]/30 rounded-2xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.85)] relative">
               {isSubmitted ? (
                 <div className="py-12 text-center animate-in fade-in duration-300">
-                  <div className="w-16 h-16 rounded-full bg-[#C5A880]/10 border border-[#C5A880]/40 flex items-center justify-center text-[#C5A880] mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-[#ECC974]/15 border border-[#ECC974]/50 flex items-center justify-center text-[#ECC974] mx-auto mb-4 shadow-[0_0_20px_rgba(236,201,116,0.25)]">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
 
@@ -151,7 +151,7 @@ export default function ContactSection() {
                     Enquiry Received
                   </h3>
 
-                  <p className="text-neutral-300 text-sm max-w-md mx-auto leading-relaxed mb-6 font-light">
+                  <p className="text-neutral-200 text-sm max-w-md mx-auto leading-relaxed mb-6 font-light">
                     Thank you, <span className="text-white font-medium">{formData.fullName}</span>. A senior Havenstone Property Advisor has received your details and will contact you via <span className="text-white font-medium">{formData.phone}</span> shortly.
                   </p>
 
@@ -160,14 +160,14 @@ export default function ContactSection() {
                       href={`https://wa.me/2348128844540?text=Hello%20Havenstone,%20I%20just%20submitted%20an%20enquiry%20under%20the%20name%20${encodeURIComponent(formData.fullName)}.`}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold uppercase tracking-wider text-white flex items-center justify-center gap-2"
+                      className="w-full sm:w-auto px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all cursor-pointer"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>Fast-Track on WhatsApp</span>
                     </a>
                     <button
                       onClick={handleReset}
-                      className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold uppercase tracking-wider text-neutral-300"
+                      className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-[#ECC974]/30 text-xs font-bold uppercase tracking-wider text-neutral-200 cursor-pointer"
                     >
                       Send Another Enquiry
                     </button>
@@ -179,7 +179,7 @@ export default function ContactSection() {
                     <h3 className="font-serif text-2xl text-white font-normal">
                       Send Property Enquiry
                     </h3>
-                    <p className="text-xs text-neutral-400 mt-1">
+                    <p className="text-xs text-neutral-300 mt-1">
                       Fill out the form below and an agent will respond within 2 business hours.
                     </p>
                   </div>
@@ -196,7 +196,7 @@ export default function ContactSection() {
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         placeholder="e.g. Babatunde Adeleke"
-                        className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880] transition-colors"
+                        className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
                       />
                     </div>
 
@@ -211,7 +211,7 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. 0803 123 4567"
-                        className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880] transition-colors tabular-nums"
+                        className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors tabular-nums"
                       />
                     </div>
                   </div>
@@ -227,7 +227,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. adeleke@example.com"
-                      className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880] transition-colors"
+                      className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -240,7 +240,7 @@ export default function ContactSection() {
                       <select
                         value={formData.propertyType}
                         onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-                        className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                        className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                       >
                         <option value="Apartment">Apartment</option>
                         <option value="Luxury Duplex">Luxury Duplex</option>
@@ -258,7 +258,7 @@ export default function ContactSection() {
                       <select
                         value={formData.preferredLocation}
                         onChange={(e) => setFormData({ ...formData, preferredLocation: e.target.value })}
-                        className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                        className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                       >
                         <option value="Lekki Phase 1">Lekki Phase 1</option>
                         <option value="Ikoyi">Ikoyi</option>
@@ -278,7 +278,7 @@ export default function ContactSection() {
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors cursor-pointer"
+                        className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                       >
                         <option value="Under ₦100M">Under ₦100,000,000</option>
                         <option value="₦100M - ₦200M">₦100M – ₦200,000,000</option>
@@ -298,7 +298,7 @@ export default function ContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us what you are looking for (e.g., swimming pool, dedicated compound, investment timeline)..."
-                      className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880] transition-colors resize-none"
+                      className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors resize-none"
                     />
                   </div>
 
@@ -306,20 +306,20 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 text-xs font-semibold tracking-widest uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
+                    className="gold-btn w-full py-4 px-6 text-xs font-bold tracking-widest uppercase rounded-lg transition-all flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <span>Sending Enquiry...</span>
                     ) : (
                       <>
-                        <Send className="w-4 h-4" />
+                        <Send className="w-4 h-4 stroke-[2.5]" />
                         <span>Send Enquiry</span>
                       </>
                     )}
                   </button>
 
-                  <div className="flex items-center justify-center gap-2 text-[11px] text-neutral-500 mt-2">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#C5A880]" />
+                  <div className="flex items-center justify-center gap-2 text-[11px] text-neutral-400 mt-2">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#ECC974]" />
                     <span>Your contact details are strictly confidential. We never spam.</span>
                   </div>
                 </form>

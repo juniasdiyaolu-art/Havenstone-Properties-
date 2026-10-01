@@ -45,12 +45,12 @@ export default function InspectionModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-xl bg-[#12151B] border border-white/15 rounded-2xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col text-left">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-xl bg-[#07090C] border border-[#ECC974]/30 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.95)] overflow-hidden my-auto max-h-[92vh] flex flex-col text-left">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0B0D10]/80">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0B0E14]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#C5A880] font-semibold block">
+            <span className="text-xs uppercase tracking-widest text-[#ECC974] font-bold block">
               Private Booking
             </span>
             <h3 className="font-serif text-2xl text-white font-normal mt-0.5">
@@ -59,18 +59,18 @@ export default function InspectionModal({
           </div>
           <button
             onClick={handleClose}
-            className="p-1.5 rounded-full text-neutral-400 hover:text-white hover:bg-white/10"
+            className="p-1.5 rounded-full text-neutral-400 hover:text-white hover:bg-white/10 cursor-pointer"
             aria-label="Close"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-[#ECC974]" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto p-6">
+        <div className="overflow-y-auto p-6 bg-[#07090C]">
           {isSubmitted ? (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#C5A880]/15 border border-[#C5A880]/40 flex items-center justify-center text-[#C5A880] mx-auto">
+              <div className="w-16 h-16 rounded-full bg-[#ECC974]/15 border border-[#ECC974]/50 flex items-center justify-center text-[#ECC974] mx-auto shadow-[0_0_20px_rgba(236,201,116,0.3)]">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
 
@@ -78,8 +78,8 @@ export default function InspectionModal({
                 Inspection Reserved
               </h4>
 
-              <p className="text-sm text-neutral-300 font-light leading-relaxed max-w-sm mx-auto">
-                Thank you, <span className="text-white font-medium">{fullName}</span>. Your private inspection request for <strong className="text-white">{currentProp.name}</strong> on <strong className="text-[#C5A880]">{date}</strong> ({timeSlot}) has been queued. Our concierge will call you at <strong className="text-white">{phone}</strong> to confirm security access credentials.
+              <p className="text-sm text-neutral-200 font-light leading-relaxed max-w-sm mx-auto">
+                Thank you, <span className="text-white font-medium">{fullName}</span>. Your private inspection request for <strong className="text-white">{currentProp.name}</strong> on <strong className="text-[#ECC974]">{date}</strong> ({timeSlot}) has been queued. Our concierge will call you at <strong className="text-white">{phone}</strong> to confirm security access credentials.
               </p>
 
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -87,14 +87,14 @@ export default function InspectionModal({
                   href={`https://wa.me/2348128844540?text=Hello%20Havenstone,%20I%20just%20scheduled%20an%20inspection%20for%20${encodeURIComponent(currentProp.name)}%20on%20${date}.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold uppercase tracking-wider text-white flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Confirm on WhatsApp</span>
                 </a>
                 <button
                   onClick={handleClose}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-white/10 hover:bg-white/15 text-xs font-semibold uppercase tracking-wider text-neutral-300"
+                  className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white/10 hover:bg-white/15 text-xs font-bold uppercase tracking-wider text-neutral-200 cursor-pointer"
                 >
                   Done
                 </button>
@@ -113,7 +113,7 @@ export default function InspectionModal({
                     onClick={() => setInspectionType('physical')}
                     className={`py-2 px-3 rounded-lg text-xs font-medium border text-center transition-colors cursor-pointer ${
                       inspectionType === 'physical'
-                        ? 'bg-[#C5A880]/15 border-[#C5A880] text-white font-semibold'
+                        ? 'bg-[#ECC974]/20 border-[#ECC974] text-white font-semibold shadow-[0_0_15px_rgba(236,201,116,0.25)]'
                         : 'border-white/10 text-neutral-400 hover:text-white'
                     }`}
                   >
@@ -124,7 +124,7 @@ export default function InspectionModal({
                     onClick={() => setInspectionType('virtual')}
                     className={`py-2 px-3 rounded-lg text-xs font-medium border text-center transition-colors cursor-pointer ${
                       inspectionType === 'virtual'
-                        ? 'bg-[#C5A880]/15 border-[#C5A880] text-white font-semibold'
+                        ? 'bg-[#ECC974]/20 border-[#ECC974] text-white font-semibold shadow-[0_0_15px_rgba(236,201,116,0.25)]'
                         : 'border-white/10 text-neutral-400 hover:text-white'
                     }`}
                   >
@@ -141,7 +141,7 @@ export default function InspectionModal({
                 <select
                   value={propertyId}
                   onChange={(e) => setPropertyId(e.target.value)}
-                  className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                  className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                 >
                   {PROPERTIES.map((p) => (
                     <option key={p.id} value={p.id}>
@@ -162,7 +162,7 @@ export default function InspectionModal({
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="e.g. Chioma Nwosu"
-                    className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880]"
+                    className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -176,7 +176,7 @@ export default function InspectionModal({
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="e.g. 0812 884 4540"
-                    className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880] tabular-nums"
+                    className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors tabular-nums"
                   />
                 </div>
               </div>
@@ -191,14 +191,14 @@ export default function InspectionModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="e.g. chioma@example.com"
-                  className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#C5A880]"
+                  className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-neutral-300 mb-1.5 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#C5A880]" />
+                    <Calendar className="w-3.5 h-3.5 text-[#ECC974]" />
                     <span>Preferred Date *</span>
                   </label>
                   <input
@@ -206,19 +206,19 @@ export default function InspectionModal({
                     required
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                   />
                 </div>
 
                 <div>
                   <label className="block text-xs font-medium text-neutral-300 mb-1.5 flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#C5A880]" />
+                    <Clock className="w-3.5 h-3.5 text-[#ECC974]" />
                     <span>Preferred Time Slot *</span>
                   </label>
                   <select
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
-                    className="w-full bg-[#1C212A] border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="w-full bg-[#121620] border border-white/10 hover:border-[#ECC974]/40 focus:border-[#ECC974] focus:ring-1 focus:ring-[#ECC974]/40 rounded-lg px-3 py-2 text-sm text-white focus:outline-none transition-colors cursor-pointer"
                   >
                     <option value="10:00 AM - 12:00 PM">Morning (10:00 AM – 12:00 PM)</option>
                     <option value="1:00 PM - 3:00 PM">Afternoon (1:00 PM – 3:00 PM)</option>
@@ -231,7 +231,7 @@ export default function InspectionModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 px-6 text-xs font-semibold tracking-widest uppercase text-[#0B0D10] bg-[#C5A880] hover:bg-[#D4B57E] rounded-md transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
+                  className="gold-btn w-full py-3.5 px-6 text-xs font-bold tracking-widest uppercase rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? 'Confirming...' : 'Confirm Inspection Request'}
                 </button>
@@ -239,7 +239,7 @@ export default function InspectionModal({
 
               <div className="text-center text-xs text-neutral-400 pt-2 flex items-center justify-center gap-2">
                 <span>Or dial directly:</span>
-                <a href="tel:+2348128844540" className="text-[#C5A880] font-semibold hover:underline flex items-center gap-1">
+                <a href="tel:+2348128844540" className="text-[#ECC974] font-semibold hover:underline flex items-center gap-1">
                   <Phone className="w-3 h-3" />
                   <span>08128844540</span>
                 </a>
